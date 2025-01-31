@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.checkout-content {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background: url('thumb-1920-983077.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.btn {
+    display: flex;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #000;
+    padding: 1.5rem;
+    line-height: 2rem;
+
+}
+
+th,
+td {
+    border: 1px solid #000;
+
+}
+
+.rec {
+    background: #fff;
+    opacity: 0.9;
+    padding: 1rem;
+}

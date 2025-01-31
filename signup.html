@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+    <div class="box" style="border: 10px solid black; border-radius: 1.675vw; border-top-left-radius: 1000px;border-top-right-radius: 1000px; backdrop-filter: blur(4px); padding: 100px; padding-left: 80px;" >
+        <form action="/create" method="post"  >
+        <div class="inputbox" style="padding-bottom: 15px;">
+            <input type="text" placeholder="UserName" name="name" required>
+            <i class="fa-solid fa-user"></i>
+         </div>
+         <div class="inputbox" style="padding-bottom: 15px;">
+          <input type="text" placeholder="E-mail" name="e-mail" required>
+            <i class="fa-solid fa-user"></i>
+         </div>
+         <div class="inputbox" style="padding-bottom: 15px;">
+            <input type="password" placeholder="Password" name="passcode" id="password" required>
+            <i class="fa-solid fa-lock"></i>
+         </div>
+         <div class="inputbox" style="padding-bottom: 15px;">
+            <input type="password" placeholder="Confirm Password" name="passcode" id="confirm_password"required>
+         </div>
+         <button type="submit" class="wrapp btn" >SignUp</button>
+        </form>
+    </div>
+    <script>
+        var password = document.getElementById("password")
+  , confirm_password = document.getElementById("confirm_password");
+
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+</script>
+</body>
+</html>
